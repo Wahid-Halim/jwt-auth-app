@@ -1,7 +1,7 @@
 import Cards from "../components/Cards";
 const PokemonCards = () => {
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center">
       <Cards />
     </div>
   );

@@ -3,19 +3,15 @@ const Nav = () => {
   return (
     <div>
       <div className="navbar bg-base-100 shadow-sm justify-between">
-        <a className="btn btn-ghost text-xl">daisyUI</a>
-        <div>
-          <Link className="btn btn-ghost text-xl" to={"/"}>
-            Home
-          </Link>
-          <Link to={"/login"} className="btn btn-ghost text-xl">
-            Login
-          </Link>
-          <Link to={"/register"} className="btn btn-ghost text-xl">
+        <Link to={"/"} className="btn btn-ghost text-xl">
+          <img src="pokemon_logo.png" alt="pokemon logo" className="w-10" />
+        </Link>
+        <div className="space-x-2">
+          <Link to={"/register"} className="btn btn-outline btn-primary">
             Register
           </Link>
-          <Link to={"/pokemon-cards"} className="btn btn-ghost text-xl">
-            Cards
+          <Link to={"/login"} className="btn btn-active btn-primary">
+            Login
           </Link>
         </div>
       </div>

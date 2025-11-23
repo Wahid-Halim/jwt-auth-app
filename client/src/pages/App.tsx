@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./Home";
 import Login from "./Login";
 import Register from "./Register";
 import PokemonCards from "./PokemonCards";
@@ -11,17 +10,16 @@ const App = () => {
     <BrowserRouter>
       <Nav />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
         <Route
-          path="/pokemon-cards"
+          path="/"
           element={
             <ProtectedRoute>
               <PokemonCards />
             </ProtectedRoute>
           }
         />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </BrowserRouter>
   );

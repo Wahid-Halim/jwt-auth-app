@@ -40,15 +40,15 @@ export default function RegisterForm() {
   };
 
   return (
-    <div className="flex items-center justify-center h-[70vh]">
+    <div className=" flex items-center justify-center h-[70vh]">
       <form onSubmit={handleRegister}>
-        <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+        <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-sm border p-4">
           <legend className="fieldset-legend">Register</legend>
 
           <label className="label">Username</label>
           <input
             type="text"
-            className="input"
+            className="input w-full"
             placeholder="Username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -57,7 +57,7 @@ export default function RegisterForm() {
           <label className="label">Email</label>
           <input
             type="email"
-            className="input"
+            className="input w-full"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -66,7 +66,7 @@ export default function RegisterForm() {
           <label className="label">Password</label>
           <input
             type="password"
-            className="input"
+            className="input w-full"
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -75,9 +75,13 @@ export default function RegisterForm() {
           <button type="submit" className="btn btn-neutral mt-4">
             Register
           </button>
-          <Link to="/login" className="text-center">
-            or Login
-          </Link>
+
+          <p className="text-sm mt-4 text-center">
+            Already have an account?{" "}
+            <Link to="/login" className="text-info underline">
+              Login
+            </Link>
+          </p>
         </fieldset>
       </form>
     </div>

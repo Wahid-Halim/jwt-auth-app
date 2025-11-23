@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState<string>("");
@@ -20,7 +20,7 @@ const Login = () => {
       console.log(token);
       if (token) {
         localStorage.setItem("token", token);
-        navigate("/pokemon-cards");
+        navigate("/");
       }
     } catch (error) {
       console.log(error);
@@ -36,7 +36,7 @@ const Login = () => {
           <label className="label">Email</label>
           <input
             type="email"
-            className="input"
+            className="input w-full"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -45,7 +45,7 @@ const Login = () => {
           <label className="label">Password</label>
           <input
             type="password"
-            className="input"
+            className="input w-full"
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -54,6 +54,12 @@ const Login = () => {
           <button className="btn btn-neutral mt-4" type="submit">
             Login
           </button>
+          <p className="text-sm mt-4 text-center">
+            Don't have an account?{" "}
+            <Link to="/register" className="text-info underline">
+              Register
+            </Link>
+          </p>
         </fieldset>
       </form>
     </div>
