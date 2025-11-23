@@ -1,4 +1,4 @@
-const pokemonCards = () => {
+const PokemonCards = () => {
   return (
     <div className="flex h-screen items-center justify-center flex-wrap gap-4">
       <div className="hover-3d">
@@ -68,4 +68,4 @@ const pokemonCards = () => {
   );
 };
 
-export default pokemonCards;
+export default PokemonCards;

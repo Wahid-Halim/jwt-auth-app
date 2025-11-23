@@ -8,6 +8,7 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
+    unique: [true, "email already exists"],
     validate: {
       validator: function (value) {
         return /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(value);
@@ -19,10 +20,6 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
     minlength: [6, "Must at least 6 character"],
-  },
-  isAdmin: {
-    type: Boolean,
-    required: true,
   },
 });
 

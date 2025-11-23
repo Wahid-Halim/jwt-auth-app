@@ -1,9 +1,10 @@
-import React from 'react'
-
+import Cards from "../components/Cards";
 const PokemonCards = () => {
   return (
-    <div>PokemonCards</div>
-  )
-}
+    <div>
+      <Cards />
+    </div>
+  );
+};
 
-export default PokemonCards
+export default PokemonCards;
